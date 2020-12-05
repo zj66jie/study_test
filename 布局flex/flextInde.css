@@ -1,0 +1,99 @@
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    box-sizing: border-box;
+    width: 750px;
+    padding: 105px 54px 0 68px;
+   
+    margin-top: 30px;
+    margin-left: 50px;
+    
+}
+
+.top {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 68px;
+   
+
+}
+
+.topLf {
+    font-size: 1.5em;
+
+}
+
+.topRg {
+    font-size: 2em;
+}
+
+.middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.middleLeft {
+    display: flex;
+
+    align-items: center;
+}
+
+.middleText {
+    display: flex;
+    flex-direction: column;
+}
+
+.middleText>span:nth-child(1) {
+    font-size: 29px;
+    font-family: SF Pro Text;
+    font-weight: 600;
+    line-height: 38px;
+    color: Drgba(55, 53, 57, 1);
+}
+
+.middleText>span:nth-child(2) {
+    font-size: 23px;
+    font-family: SF Pro Text;
+    font-weight: 600;
+    line-height: 38px;
+    color: rgba(55, 53, 57, 1);
+}
+
+.midLf {
+    font-size: 1.5em;
+    margin-right: 65px;
+}
+
+.bottom{
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box; /*解决内边距撑开div*/
+    margin-top: 30px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 750px;
+    height: 145px;
+   padding: 0 54px 0 63px; 
+  
+
+  
+}
+.middleRight{
+    background-color: springgreen;
+}

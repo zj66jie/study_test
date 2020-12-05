@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+            
+        }
+        #header{
+            background-color:seagreen;
+            height: 50px;
+        }
+        .head{
+            width: 1050px;height: 50px;
+            background: #F74727;
+           margin: auto;
+        }
+        #banner{
+
+            height: 500px;
+            background-color: darkcyan;
+        }
+
+        #bottm{
+            /* height: 200px;*/
+            
+            width: 1010px; 
+            background-color: darkorange;
+            margin: auto;
+            overflow: auto; /* 在父元素中可以自动匹配子元素的height，可省略 height: 200px;*/
+
+
+
+
+        }
+        #bottm .itm{ /* 不要忘记加空格 */
+            /* line-height: 125px; */
+            background-color:darkred;
+          height: 165px;width: 125px;
+          padding: 25px 25px 25px 25px; /* 上 右 下 左 顺时针 */
+          border-right: 2px dashed black;
+          float: left;
+
+            
+        }
+        #bottm .itm.first{
+            padding-left: 0px;
+
+        }
+        #bottm .itm.last{
+            padding-right: 0px;
+            border: 0px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <div class="head">
+gd
+        </div>
+
+
+    </div>
+    
+    <div id="banner">
+
+    </div>
+
+    <div id="bottm">
+      
+        <div class="itm first">
+           吗更多神干啥
+        </div>
+        <div class="itm">
+          回个电话
+        </div>
+        <div class="itm"></div>
+        <div class="itm"></div>
+        <div class="itm"></div>
+        <div class="itm last"></div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Mouse {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: cadetblue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Mouse">
+ff
+      <p class="m1" value="sfs" >5</p>
+       
+       
+    </div>
+    <script>
+        //var Mo = document.getElementsByTagName("div")[0];
+        var Mo = document.getElementById("Mouse");
+        
+        //var oSpan=Mo.children[0];
+        ///alert(Mo.innerHTML);  可以用
+        
+        var oSpan=document.getElementsByClassName("m1")[0]; //可以用，注意获取class是所有的数组要注明数组
+        
+       
+            alert(oSpan.innerHTML);
+         
+        //alert(oSpan.length);
+        //var oSpan=document.getElementsByClassName("m1");
+       // Mo.onmousemove
+
+        Mo.onmousemove=function(e){
+            var ect=e||event;
+            var ectX=ect.offsetX;
+            var ectY=ect.offsetY;
+            //var ectX=ect.clientX;
+            //var ectY=ect.clientY;
+            //oSpan.innerHTML=ectX+","+ectY;
+            oSpan.innerHTML=ectX+","+ectY;
+           
+
+
+        }
+       
+
+
+
+    </script>
+</body>
+
+</html>

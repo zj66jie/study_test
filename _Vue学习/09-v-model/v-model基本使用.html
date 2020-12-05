@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="zi"><!--传递输入框值  -->
+    <input type="checkbox"  v-model="agree" >统一协议
+    <h1>选择是：{{agree}}</h1>
+    <button :disabled="!agree">下一步</button>
+
+
+    <input  type="checkbox" name="j" value="i" v-model="hob" >1<!-- 传递value值 -->
+    <input type="checkbox" name="j" value="2" v-model="hob">2
+    <h1>{{zi}}</h1>
+<br>
+     
+   
+     
+  
+     
+
+
+    <label :for="item" v-for="item of mes"> <!-- 用label for绑定id可以整个id内容可点击交互 -->
+      <input type="checkbox" :id="item" :value="item" v-model="hob">{{item}}
+    </label>
+<h1>{{hob}}</h1>
+  </div>
+  <script src="../js/vue.js"></script>
+  <script>
+  
+  let app = new Vue({
+    el: '#app',  //先定义抓取id
+    data: {
+       mes:['篮球','足球'] ,
+       hob:[] ,
+       zi:"josj",
+       agree:false     
+     
+    },
+  })
+
+  
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+body{
+    font-size: 14px;
+    background-color: #F4F4F4;
+    box-sizing: border-box;
+}
+
+*{
+   box-sizing: border-box; /*//设置padding不称起原来高度 */
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.sousuo{
+  font-size:18px;
+  color:white;
+}
+.gouwuche{
+  font-size:18px;
+  color:black;
+}

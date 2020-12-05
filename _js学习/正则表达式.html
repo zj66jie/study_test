@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var reg=/Abc/i;
+        //var reg=new RegExp("Abc");
+
+        var ma="abc";
+        console.log(ma.match(reg)); //
+        var flage=reg.test("abcs"); //检测含有内容是否有reg中的
+        console.log(flage);
+        var reg1=/[a-z]/; //a到z字母
+        console.log(reg1.test("12ab")); 
+        var reg2=/[\w]/; //a到z字母
+        console.log(reg2.test("12ab")); 
+        
+        var person=new Object({
+          name:"je"
+        })
+        console.log(person.name)
+
+
+
+    </script>
+</body>
+</html>

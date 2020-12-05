@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <cpn1></cpn1>
+
+    <template id='cpn3'>
+      <div>
+        <h2>组件开发3内部直接写，没啥意义</h2>
+      </div>
+    </template>
+    
+    <cpn2></cpn2>
+    <cpn1></cpn1>
+  </div>
+
+  <template id='cpn'>
+
+    <h2>组件开发11全局</h2>
+
+  </template>
+  <template id='cpn2'>
+    <div>
+      <h2>组件开发2局部</h2>
+    </div>
+  </template>
+  <script src="../js/vue.js"></script>
+  <script>
+    // 全局组件
+    Vue.component("cpn1", {
+      template: '#cpn'
+    })
+
+    let app = new Vue({
+      el: '#app',  //先定义抓取id
+
+      // 组件局部，template可以链接app内和外id，只在本vue。el-id下使用
+      components: {
+        cpn2: {
+          template: "#cpn2",
+        
+        }
+
+      }
+
+    })
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <cpn :cmessage="zi" :cmovies="mes"></cpn>
+
+  </div>
+  <template id='cpn'>
+    <div>
+      <h2>{{cmessage}}</h2>
+      <h2>{{cmovies}}</h2>
+    </div>
+  </template>
+  <script src="../js/vue.js"></script>
+  <script>
+
+
+    //父传子: props
+    const cpn1 = {
+      template: '#cpn',
+      //第一种简写 props: ['cmovies', 'cmessage'],
+      props: {
+        // 1·英型限制 第二种写法
+        // cmovies: Array,
+        // cmessage: String,
+        // 2.提供一些默认值,以及必传值。三种写法
+        cmessage: {
+          type: String,
+          default: 'aaaaaaaa',
+          required: true
+        },
+        //类型是对象或者数组时,默认值必须是一个函救
+        cmovies: {
+          type: Array,
+          default() {
+            return []
+          }
+        }
+      }
+    }
+    let app = new Vue({
+      el: '#app',  //先定义抓取id
+      data: {
+        mes: ['篮球', '足球'],
+        zi: "josj",
+      },
+      components: {
+        cpn: cpn1
+      }
+
+    })
+  </script>
+
+</body>
+
+</html>

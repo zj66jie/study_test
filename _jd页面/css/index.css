@@ -1,0 +1,116 @@
+.nav{
+    height: 30px;
+    background:#E3E4E5;
+    border-bottom: 1px solid #ddd;
+}
+.nav-box{
+    margin: 0px auto;
+    width: 1190px;
+    text-align: right;
+}
+
+.nav-box ul li {
+      /*
+    display: inline;
+   
+    padding-left: 10px;
+    font-size: 10px;
+    height:30px;
+    line-height: 30px;
+    border-right: 1px solid #cccccc;
+    padding-right:10px ;*/
+}
+.nav-box li {
+    display: inline;
+    padding-left:10px;
+    font-size: 12px;
+    
+    height:30px;
+    line-height: 30px;
+    border-right: 1px solid #cccccc;
+    padding-right:10px;
+}
+.nav-box a{
+    columns: #999999;;
+}
+.nav-box a:hover{
+    color: #f10;
+
+}
+.header-box{
+    
+    background-color: white;
+    height: 140px;
+    
+}
+.header{
+    margin: 0px auto;
+    background-color: white;
+    width: 1190px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.logo-box{
+    width: 190px;
+    height: 120px;
+}
+.search-box li{
+    display: inline;
+    padding:0 10px;
+   
+}
+.search{
+  
+    font-size: 0;
+}
+.search-bar input{
+  border: 2px solid #e1251e;
+  border-right: 0;
+  width: 500px;
+  height: 40px;
+  padding: 2px 10px;
+  outline: none;
+  border-radius: 0;
+  
+   
+}
+.sousu{
+  background-color: #e1251e;
+    width: 55px;
+    height: 40px;
+    border: none;
+    border-radius: 0;
+    outline: none;
+   
+
+}
+
+.gouwuc{
+  margin-left: 50px;
+  width: px;
+    height: 40px;
+}
+.header .search-box{
+    width: 790px;
+    padding: 0px 10px;
+    
+}
+
+.search-bar .search{
+    
+    padding: 0 30px;
+}
+.header .recommend{
+   
+    padding: 5px 0px 15px 5px;
+}
+.header .recommend2{
+   margin-top: 20px;
+   
+    padding:0px;
+}
+.header .recommend a{
+    font-size:12px;
+    color: #999999;
+}

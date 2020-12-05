@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+
+    <h2 v-if="score>=90">优秀</h2>
+    <h2 v-else-if="score>=80">良好</h2>
+    <h2 v-else-if="score>=70">介个</h2>
+    <h2 v-else>bujiege</h2>
+    <h2>{{finScore}}</h2>
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script>
+    let app = new Vue({
+      el: '#app',  //先定义抓取id
+      data: {
+      score:'92',
+
+      },
+      // 
+      computed: { //计算属性
+       finScore(){
+         let Sc='';
+         if(this.score>=90){
+           Sc='优秀'
+
+         }
+        else if(this.score>=80){
+           Sc='良好';
+
+         }
+        else if(this.score>=70){
+           Sc='介个';
+
+         }
+         else{
+           Sc='bujige';
+         }
+         return Sc;
+
+       }
+      },
+
+    })
+  </script>
+</body>
+</html>

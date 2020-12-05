@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // 1.Promise 的回调
+    // new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve();
+    //   }, 1000);
+    // })
+    //   .then(() => {
+    //     console.log(1);
+    //     return new Promise((resole, reject) => {
+    //       setTimeout(() => {
+    //         resole();
+    //       }, 1000);
+    //     });
+    //   })
+    //   .then(() => {
+    //     console.log(2);
+    //     return new Promise((resole, reject) => {
+    //       setTimeout(() => {
+    //         resole();
+    //       }, 1000);
+    //     });
+    //   })
+
+    // 2.传递值在.then中接收
+    // new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve("数据");
+    //   }, 1000);
+    // }).then((data) => {
+    //   console.log(data);
+    // });
+
+    // 3. Promise的简写
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("数据1");
+      }, 1000);
+    })
+      .then((data) => {
+        console.log(data);
+        return new Promise((resolve, rejece) => {
+          //完整写
+          resolve("数据2");
+        });
+      })
+      .then((data) => {
+        console.log(data);
+        return Promise.resolve("数据3"); //直接return Promise
+        //return Promise.reject("错误"); //直接return reject
+        //throw "错误";                 //直接抛出错误 reject
+      })
+      .then((data) => {
+        console.log(data);
+        return "数据4"; //直接return 数据
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    function ccc() {
+      return new Promise((res, rjt) => {
+        setTimeout(() => {
+          res("自己设置");
+        }, 1000);
+      });
+    }
+    ccc().then((res) => {
+      console.log(res);
+    });
+
+    /*4.Promise All 当里面的全部异步执行完成后，
+    才会返回所有的值（数组形式），解决异步需要满足全部完成才能下一步的问题*/
+
+    Promise.all([
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("all_1");
+        }, 2000);
+      }),
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("all_2");
+        }, 1000);
+      }),
+    ]).then((all) => {
+      console.log(all);
+    });
+  </script>
+</html>

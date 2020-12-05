@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box {
+      position: relative;
+      margin: 30px 300px;
+      display: flex;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+     
+    }
+
+    #txt {
+      width: 500px;
+      height: 30px;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border: 1px solid red;
+    }
+
+    #sou {
+      width: 50px;
+      height: 30px;
+      border: 1px solid red;
+      display: block;
+      position: absolute;
+      left: 496px;
+      top: -5px;
+      text-align: center;
+      line-height: 30px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      background: red;
+    }
+
+    #btn {
+      border: none;
+      background: red;
+      color: white;
+     
+    }
+
+
+    span {
+      width: 60px;
+      height: 30px;
+      border: 1px solid #000;
+      display: block;
+      float: left;
+      margin: 5px;
+      font-size: 12px;
+      text-align: center;
+      line-height: 30px;
+      cursor: pointer;
+    }
+
+    span:hover {
+      background: red;
+    }
+#ce{
+  width: 100px;
+  height: 100px;
+  border-radius: 0; /*设置原生的button圆角*/
+  border: 1px solid red;
+  border-top: none;
+  outline: none;  /*设置点*/
+}
+
+.ce{
+  width: 100px;
+  height: 100px;
+  border-radius: 0; /*设置原生的button圆角*/
+  border: 1px solid red;
+  border-top: none;
+  outline: none;  /*设置点击button时外边框的变化为无*/
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.sousuo{
+  font-size: 29px;
+}
+  </style>
+
+</head>
+
+<body>
+
+  <div id="box">
+    <input type="text" id="txt" placeholder="女装" />
+    <span id="sou">
+      <button id="btn"><svg class="icon sousuo" aria-hidden="true">
+        <use xlink:href="#icon-sousuo"></use>
+      </svg></button>
+    </span>
+   <div id="ce">
+pp
+   </div>
+   <div class="ce">
+ppg
+   </div>
+  
+  </div>
+
+
+  <script src="//at.alicdn.com/t/font_1844301_ism0jen6ps.js"></script>
+</body>
+
+</html>
