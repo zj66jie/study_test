@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      ///////1..使用，默认为get请求
+      axios({
+        url: "fffff?ID=12345",
+        method: "get",
+      })
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      ////////2.ge请求带参数
+      axios({
+        url: "fffff",
+        method: "get",
+        // 基本的网页传参，形式为链接后？ID=12345&name=zj
+        params: {
+          ID: 12345,
+          name: "zj",
+        },
+      })
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      /////3.post请求带参数，data传递需要后台处理
+      // data传递具有隐秘性，不直接在url头中显示
+      axios({
+        url: "fffff",
+        method: "post",
+        // 因为params是添加到url的请求字符串中的，用于get请求。
+        // 而data是添加到请求体（body）中的， 用于post请求。
+        // 若后端请求参数前加@RequestBody，则参数放入body中，axios使用data。反之则使用param
+        // 1、HTTP请求过程中，get请求：表单参数以name=value&name1=value1的形式附到url的后面；
+        // 2、post请求：表单参数是在请求体中，也是name=value&name1=value1的形式在请求体中。
+        data: {
+          ID: 12345,
+          name: "zj",
+        },
+        // params: {
+        //   ID: 12345,
+        //   name: "zj",
+        // },
+      })
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      /////4.post请求带参数，data传递，不需要需要后台处理方式
+      axios
+        .post("url", "ID=12345&name=zj")
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    </script>
+  </body>
+</html>
