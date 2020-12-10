@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      import { tt, tt2 } from "./1_class.js";
+      // class Test {
+      //   test(name, num) {
+      //     this.name = name;
+      //     this.num = num;
+      //   }
+      //   testLog() {
+      //     console.log(this.name, this.num);
+      //   }
+      // }
+      // const tt = new Test();
+      tt.name = "name1";
+      tt.num = 555;
+      // tt = {
+      //   name: "dd",
+      //   num: 555,
+      // };
+      tt.testLog();
+      // tt2.test("name1", 333);
+      tt2.name = "name2";
+      tt2.num = 333;
+      tt2.str = "吐了";
+      tt2.testLog2();
+    </script>
+  </body>
+</html>

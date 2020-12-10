@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style lang="">
+    main {
+      width: 100%;
+      display: flex;
+      background-color: rgb(243, 242, 240);
+      box-sizing: border-box;
+      /* padding: 0 20px; */
+      justify-content: space-between;
+    }
+    main div:nth-of-type(1) {
+      background: rgb(50, 36, 97);
+      /* padding-left: 0; */
+    }
+    main div:nth-of-type(2) {
+      background: rgb(158, 47, 47);
+    }
+    main div:nth-of-type(3) {
+      background: rgb(55, 112, 67);
+    }
+    main div {
+      flex: 0 0 25%;
+      box-sizing: border-box;
+      padding: 0 5px;
+    }
+    img {
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div>666</div>
+    <main>
+      <div>
+        <img src="../img/c1.jpg" alt="" />
+      </div>
+      <div>
+        <img src="../img/c1.jpg" alt="" />
+      </div>
+      <div>
+        <img src="../img/c1.jpg" alt="" />
+      </div>
+      <div>
+        <img src="../img/c1.jpg" alt="" />
+      </div>
+    </main>
+    <button onclick="teste(event)">222</button>
+    <script>
+      function teste(event) {
+        console.log(333);
+        console.log(event.target);
+      }
+    </script>
+  </body>
+</html>
