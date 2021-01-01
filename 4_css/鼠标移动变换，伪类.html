@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      padding: 200px 300px;
+    }
+    .a1 {
+      position: relative;
+      width: 300px;
+
+      cursor: pointer;
+      background-color: red;
+    }
+    .a1:hover div:nth-of-type(2) {
+      display: block;
+    }
+    .a1:hover .b1 {
+      border-bottom: 0;
+    }
+    .b1 {
+      position: absolute;
+      right: 0;
+      z-index: 200;
+      border: 1px solid black;
+      height: 50px;
+      line-height: 50px;
+      width: 100px;
+      text-align: center;
+
+      background-color: #fff;
+    }
+    .b2 {
+      background-color: #fff;
+      position: absolute;
+      right: 0;
+      top: 50px;
+      border: 1px solid black;
+      height: 50px;
+      width: 150px;
+      text-align: center;
+      line-height: 50px;
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="a1">
+      <div class="b1">购物车</div>
+      <div class="b2">你好伴随肺</div>
+    </div>
+  </body>
+</html>

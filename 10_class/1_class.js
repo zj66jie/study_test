@@ -16,12 +16,10 @@ class Test2 extends Test {
   // test(name, num, str) {
   //   super(name, num); //获得弗雷Test的this
   //   this.str = str;
-  // }
-  testLog2() {
-    console.log(this.name, this.num, this.str);
-  }
+  //
+  ret;
 }
-
+const MyComponent = resolveComponent("MyComponent");
 export const tt = new Test();
 export const tt2 = new Test2();
 export const cc = "dd";
