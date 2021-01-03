@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //match() 方法可在字符串内检索指定的值
+      //regexp.test(string)
+      let s1 = "ifsffije";
+      console.log(/js/.test(s1));
+      //match() 方法可在字符串内检索指定的值
+      // string.match(regexp)
+      var str = "The rain in SPAIN stays mainly in the plain";
+      console.log(str.match(/ain/g));
+
+      let price = "12.23";
+      console.log(/\d+\.\d+/.test(price));
+    </script>
+    <script src="./1.起始边界^$.js"></script>
+  </body>
+</html>
