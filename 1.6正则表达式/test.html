@@ -10,14 +10,14 @@
       //match() 方法可在字符串内检索指定的值
       //regexp.test(string)
       let s1 = "ifsffije";
-      console.log(/js/.test(s1));
+      console.log(/js/.test(s1)); //false
       //match() 方法可在字符串内检索指定的值
       // string.match(regexp)
       var str = "The rain in SPAIN stays mainly in the plain";
-      console.log(str.match(/ain/g));
+      console.log(str.match(/ain/g)); //长度为三的数组，三个ain值
 
       let price = "12.23";
-      console.log(/\d+\.\d+/.test(price));
+      console.log(/\d+\.\d+/.test(price)); //true
     </script>
     <script src="./1.起始边界^$.js"></script>
   </body>
