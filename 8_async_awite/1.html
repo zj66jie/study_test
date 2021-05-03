@@ -21,7 +21,31 @@
         console.log(b);
         console.log("ccc");
       }
-      test();
+
+      function show2() {
+        return new Promise((res, rej) => {
+          let a = 5;
+          if (a == 5) {
+            res(a);
+          }
+        });
+      }
+
+      async function test2() {
+        let c = 6;
+        let b;
+        if (c == 6) {
+          b = await show2();
+          console.log("1");
+        } else {
+          b = await show2();
+        }
+
+        console.log("2");
+        console.log("ccc");
+      }
+
+      test2(); //1,2,ccc
       // function show() {
       //   let a = 5;
       //   let b = 4;
