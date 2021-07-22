@@ -6,6 +6,33 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="./5.数组扁平化.js"></script>
+    <script>
+      String.prototype.firstAppear = function () {
+        let obj = {};
+        console.log(obj);
+        len = this.length;
+        for (let i = 0; i < len; i++) {
+          // console.log(obj);
+          console.log(this[i]);
+          // console.log(obj[this[i]]);
+          if (obj[this[i]]) {
+            obj[this[i]]++;
+          } else {
+            obj[this[i]] = 1;
+          }
+        }
+        for (let prop in obj) {
+          if (obj[prop] == 1) {
+            return prop;
+          }
+        }
+      };
+      let oneString = "jjisisdfj";
+      let t = {};
+      t["j"];
+      // console.log(oneString[2]);
+      console.log(t);
+      console.log(oneString.firstAppear());
+    </script>
   </body>
 </html>

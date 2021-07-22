@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+
+  <style>
+    #app {
+      margin: 0 auto;
+      width: 500px;
+      height: 600px;
+      background-color: #f5f6f8;
+      padding: 20px;
+    }
+    .container {
+      width: 100%;
+      height: 100%;
+      background-color: #f7f8fa;
+      display: flex;
+    }
+    .left {
+      width: 30%;
+      background-color: #f7f8fa;
+      position: relative;
+    }
+    .right {
+      width: 70%;
+      background-color: #fff;
+      padding-left: 15px;
+    }
+    .province {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+    }
+    .active {
+      background-color: #fff;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .redBox {
+      background-color: #ee0d24;
+      position: absolute;
+      width: 8px;
+      height: 20px;
+      left: 0;
+    }
+    .fontRed {
+      color: red;
+    }
+    .chose-city {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      /* padding-right: 15px; */
+    }
+    .cityActive {
+      width: 8px;
+      height: 16px;
+      border-color: red;
+      border-style: solid;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+      margin-right: 15px;
+    }
+  </style>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="left">
+          <div class="province" v-for="(item, index) in options" :key="index">
+            <div
+              @click="select(item)"
+              v-bind:class="{ active: item.province==isActive }"
+            >
+              <div>{{item.province}}</div>
+            </div>
+            <div v-bind:class="{ redBox: item.province==isActive }"></div>
+          </div>
+        </div>
+        <div class="right">
+          <div
+            class="city"
+            v-for="(item, index) in options.filter((s)=>s.province==isActive)"
+            :key="index"
+          >
+            <div>
+              <div
+                class="chose-city"
+                v-for="(city, index) in item.city"
+                :key="index"
+                @click="selectCity(city,item.enum)"
+              >
+                <div>{{city}}</div>
+                <div
+                  v-bind:class="{ cityActive: onSelect.includes(city) }"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          message: "Hello Vue!",
+          options: [
+            {
+              province: "浙江",
+              enum: "single",
+              city: ["杭州", "湖州", "绍兴", "宁波", "嘉兴"],
+            },
+            {
+              province: "江苏",
+              enum: "multiple",
+              city: ["南京", "无锡", "徐州", "苏州"],
+            },
+            {
+              province: "福建",
+              enum: "single",
+              city: ["厦门", "莆田", "泉州"],
+            },
+          ],
+          onSelect: [],
+          isActive: "3", //样式变换
+        },
+        methods: {
+          //选择省份
+          select(item) {
+            this.isActive = item.province;
+            console.log(this.isActive);
+            this.onSelect = [];
+          },
+          //选择城市，输出城市列表
+          selectCity(city, enu) {
+            if (enu == "single") {
+              this.onSelect = [];
+              this.onSelect.push(city);
+            } else {
+              if (this.onSelect.includes(city)) {
+                this.onSelect = this.onSelect.filter((s) => s != city);
+              } else {
+                this.onSelect.push(city);
+              }
+            }
+            console.log(this.onSelect);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
