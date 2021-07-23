@@ -7,7 +7,7 @@ jss();
 let a: number = 123;
 let b: string = "dssd";
 console.log(b);
-//对象数据类型
+//对象数据类型bx
 
 // let obj: {
 //   myname: string;
